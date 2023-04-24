@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "process.env.DEVELOPMENT_DATABASE_USERS_CORCODING",
+    "password": null,
+    "database": "database_development",
+    "host": "127.0.0.1",
+    "dialect": "postgress"
+  },
+  "test": {
+    "username": "process.env.DEVELOPMENT_DATABASE_USERS_CORCODING",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "postgress"
+  },
+  "production": {
+    "username": "process.env.DEVELOPMENT_DATABASE_USERS_CORCODING",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "postgress"
+  }
+}
