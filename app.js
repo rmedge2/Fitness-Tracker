@@ -6,6 +6,11 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+// const Sequelize = require('sequelize');
+// const { User } = require('./models');
+
+
+
 var app = express();
 
 app.use(logger('dev'));
