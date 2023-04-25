@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-/* GET home page. */
+/* GET Nutrition_logs page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.send('nutrition_logs', { title: 'Nutrition logs' });
 });
 
 module.exports = router;
