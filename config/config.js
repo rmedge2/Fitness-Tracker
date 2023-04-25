@@ -1,3 +1,5 @@
+//changed this to a .js file from a JSON file type
+
 require('dotenv').config()
 
 module.exports =
