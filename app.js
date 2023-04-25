@@ -5,8 +5,8 @@ const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const nutrition_logsRouter = require('./routes/Nutrition_logs');
-const physical_activityRouter = require('./routes/Physical_Activities');
+// const nutrition_logsRouter = require('./routes/Nutrition_log');
+// const physical_activityRouter = require('./routes/Physical_Activity');
 
 
 
@@ -26,8 +26,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/Nutrition_logs', nutrition_logsRouter);
-app.use('/Physical_Activities', Physical_ActivitiesRouter);
+// app.use('/Nutrition_log', nutrition_logsRouter);
+// app.use('/Physical_Activities', Physical_ActivitiesRouter);
 
 
 module.exports = app;

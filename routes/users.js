@@ -1,14 +1,15 @@
 
 const express = require('express');
 const router = express.Router();
-=======
 
-// const { User } = require('../models');
+
+const { User } = require('../models');
 
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.get('/', async (req, res)=> {
+  const users = await User.findAll();
+  res.json(users)
 });
 
 module.exports = router;
