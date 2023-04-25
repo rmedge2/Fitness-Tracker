@@ -12,14 +12,6 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-    await queryInterface.bulkInsert('Users', 
-    [{ firstName: 'Annie', 
-    lastName: 'Easley', 
-    email: 'ajeasley@nasa.gov', 
-    age: 24, 
-    weight: 215, 
-    createdAt: new Date(), 
-    updatedAt: new Date() }], {});
   },
 
   async down (queryInterface, Sequelize) {
@@ -29,6 +21,5 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-    return queryInterface.bulkDelete('Users', {}); 
   }
 };

@@ -9,7 +9,14 @@ const nutrition_logsRouter = require('./routes/Nutrition_logs');
 const physical_activityRouter = require('./routes/Physical_Activities');
 
 
+
 const app = express();
+
+// const Sequelize = require('sequelize');
+// const { User } = require('./models');
+
+
+
 
 app.use(logger('dev'));
 app.use(express.json());
