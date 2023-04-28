@@ -2,7 +2,7 @@
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
+  async up(queryInterface, Sequelize) {
     /**
      * Add seed commands here.
      *
@@ -12,23 +12,29 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-    await queryInterface.bulkInsert('Users', 
-    [{ firstName: 'Annie', 
-    lastName: 'Easley', 
-    email: 'ajeasley@nasa.gov', 
-    age: 24, 
-    weight: 215, 
-    createdAt: new Date(), 
-    updatedAt: new Date() }], {});
+    await queryInterface.bulkInsert('Users',
+      {});
   },
 
-  async down (queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
-    return queryInterface.bulkDelete('Users', {}); 
+  async down(queryInterface, Sequelize) {
+    return queryInterface.bulkDelete('Users',
+      [{
+        firstName: "Rodney",
+        lastName: "Edge",
+        email: "newmail@gmail.com",
+        age: 25,
+        weight: 260,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        firstName: 'Annie',
+        lastName: 'Easley',
+        email: 'ajeasley@nasa.gov',
+        age: 24,
+        weight: 215,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      }], {});
   }
 };

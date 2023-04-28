@@ -11,6 +11,14 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      // User.belongsToMany(models.Physical_Activity, {
+      //   through: 'UserPhysicalActivity',
+      //   foreignKey: 'userId'
+      // });
+      // User.belongsToMany(models.Nutrition_log, {
+      //   through: 'UserNutritionLog',
+      //   foreignKey: 'userId'
+      // });
     }
   }
   User.init({
@@ -21,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
     weight: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'User',
+    modelName: 'Users',
   });
   return User;
 };

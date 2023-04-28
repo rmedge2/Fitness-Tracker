@@ -9,10 +9,13 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate(models) {
-      // define association here
-      this.belongsTo
-    }
+    // static associate(models) {
+    //   // define association here
+    //   Physical_Activity.belongsToMany(models.User, {
+    //     through: 'UserPhysicalActivity',
+    //     foreignKey: 'PhysicalActivityId'
+    //   });
+    // }
   }
   Physical_Activity.init({
     Cycling: DataTypes.INTEGER,
@@ -25,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
     Walking: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'Physical_Activity',
+    modelName: 'Physical_Activities',
   });
   return Physical_Activity;
 };

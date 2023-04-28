@@ -9,9 +9,13 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate(models) {
-      // define association here
-    }
+    // static associate(models) {
+    //   // define association here
+    //   Nutrition_log.belongsToMany(models.User, {
+    //     through: 'UserNutritionLog',
+    //     foreignKey: 'NutritionLogId'
+    //   });
+    // }
   }
   Nutrition_log.init({
     Water_oz: DataTypes.STRING,
@@ -19,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     Calories: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'Nutrition_log',
+    modelName: 'Nutrition_logs',
   });
   return Nutrition_log;
 };
