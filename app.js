@@ -5,8 +5,8 @@ const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-// const nutrition_logsRouter = require('./routes/Nutrition_log');
-// const physical_activityRouter = require('./routes/Physical_Activity');
+const nutrition_logsRouter = require('./routes/Nutrition_log');
+const physical_activityRouter = require('./routes/physicial_log');
 
 
 
